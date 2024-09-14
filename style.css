@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f3e9; 
+    color: #333;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0 10px;
+}
+
+header {
+    background-color: #f4c7ab; 
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin: 0;
+    color: #524f52; 
+}
+
+a svg {
+    fill: #000000; /* Cambia #000000 por el color que prefieras, como #ff0000 para rojo */
+}
+
+.principal {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+
+.cards_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+
+.clothes_container {
+    background-color: #fff5e6; /* Color pastel beige */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.clothes_container:hover {
+    transform: scale(1.05);
+}
+
+.clothes_container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.clothes_container h3 {
+    color: #524f52;
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+
+.clothes_container button {
+    padding: 10px 20px;
+    background-color: #b4c8b7; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.clothes_container button:hover {
+    background-color: #9bb3a0; 
+}
+
+
+.back {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 100%;
+}
