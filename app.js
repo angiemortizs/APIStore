@@ -29,13 +29,21 @@ const addToCart = (clothe, event) => {
     updateCart(); // Actualizar el carrito visualmente
 };
 
+// Funcion para eliminar productos
+const removeFromCart = (index, event) => {
+    event.preventDefault(); // Evita la recarga de la página
+    const removedProduct =
+    cart.splice(index,1)[0];
+    total -= removedProduct.price;
+    updateCart();
+}
+
 const createClothes = (clothe) => {
     const card = document.createElement("div");
     card.classList.add("clothes_container");
 
     const imgClothes = document.createElement("img");
     imgClothes.src = clothe.image;
-    imgClothes.alt = clothe.title;
 
     const divDescription = document.createElement("div");
     divDescription.classList.add("clothes_description");
@@ -50,6 +58,9 @@ const createClothes = (clothe) => {
     shoppingCart.textContent = "Añadir al carrito";
     shoppingCart.addEventListener("click", (event) => addToCart(clothe, event)); // Evento para añadir al carrito
 
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Eliminar";
+    removeButton.addEventListener("click", () => removeFromCart(index)); // Evento para eliminar
 
     containerCards.appendChild(card);
     card.appendChild(imgClothes);
@@ -58,6 +69,7 @@ const createClothes = (clothe) => {
     divDescription.appendChild(priceClothe);
     divDescription.appendChild(titleClothe);
     divDescription.appendChild(shoppingCart);
+    divDescription.appendChild(removeButton);
 };
 
 const getClothes = async () => {
@@ -66,6 +78,7 @@ const getClothes = async () => {
 };
 
 window.addEventListener("DOMContentLoaded", getClothes);
+
 
 // const realizarCompraButton = document.getElementById("realizarCompra");
 
