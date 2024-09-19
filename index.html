@@ -13,39 +13,41 @@
             <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1M8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
         </svg>
         <h1>Angie Store</h1>
-    <!-- Contenedor del carrito -->
-    <div id="cart">
-        <span id="cart-count">0</span> Productos - Total: $<span id="cart-total">0.00</span>
-    </div>
-    
-        <a href="cart.html" target="_self">
+
+        <!-- Contenedor del carrito -->
+        <div id="cart">
+            <span id="cart-count">0</span> Productos - Total: $<span id="cart-total">0.00</span>
+        </div>
+        
+        <a href="#" id="openCart">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
         </svg>
+        </a>
     </header>
+    
+    <!-- Modal de carrito -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span id="closeCart" class="close">&times;</span>
+            <h2>Resumen de la compra</h2>
+            <ul id="cartItems">
+                <!-- Productos en el carrito aparecerán aquí -->
+            </ul>
+            <div>Total: $<span id="cart-total-modal">0.00</span></div>
+            <button id="finalizePurchase">Finalizar compra</button>
+        </div>
+    </div>
+
     <section class="principal"> 
-        <div class="back">
-            <!-- El background blanco debajo del header -->
-        </div>
-        <div class="back_container">
-            <!-- El container que va a contener las cards de productos -->
-        </div>
+        <div class="back"></div>
+        <div class="back_container"></div>
         <div class="cards_container" id="cardsContainer">
             <!-- Aquí se van a dibujar las cards -->
-                <!-- 
-            <div class = "clothes_container"
-                <img src="" alt=""></img>
-                <h3></h3>
-                <h3></h3>
-            <button></button> -->
         </div>
     </section>
     </main>
-    <script src="app.js"> 
-    </script>
-<!-- <footer>
-    <button id="realizarCompra">Realizar compra</button>
-</footer> -->
-
+    
+    <script src="app.js"></script>
 </body>
 </html>
